@@ -22,3 +22,11 @@ En el orden de ideas de el despliegue del cluster el despliegue de el cluster at
 aqui estan los resultados de corre ese comando, esto se hizo en cloudshell de amazon:
 ![imagen](https://github.com/Pamilo/reto6/assets/81716232/fc21e192-3897-4787-9d63-a145854771b1)
 ![imagen](https://github.com/Pamilo/reto6/assets/81716232/e3136053-cb64-4654-97bd-a017e990db58)
+
+## Ejecucion de programa WordCount
+Iniciamos ejecutando "wordcount-local.py" para esto se usa el comando
+```bash
+python wordcount-local.py ./*.txt > salida-serial.txt
+```
+lo cual revisa los archivos datos1.txt y datos2.txt que se encuentran en la carpeta worcount, ese resultado se guarda en salida-serial.txt el resultado es el siguiente
+![imagen](https://github.com/Pamilo/reto6/assets/81716232/c436321a-03cc-42ff-b7eb-c0fce9942759)
