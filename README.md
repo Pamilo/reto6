@@ -1,7 +1,28 @@
 # Reto 6
 
 ## Despliegue del cluster 
-El cluster se desplego colonando una instancia de los utilizados para el reto 6 para mas detalle acerca de lo que eso implica mirar este video : https://youtu.be/a3F0zb2Dctk .
+El cluster fue creado atraves de AWS CLI para esto primero (asumiedo que ya se tienen una key pair a utilizar) se crea un bucket en S3 usando el comando
+```bash
+aws s3api create-bucket --bucket bucket-reto --region us-east-1
+```
+lo cual no genera el siguiente resultado
+![imagen](https://github.com/Pamilo/reto6/assets/81716232/1be5db73-6ac0-46dd-8e32-1d5575540792)
+![imagen](https://github.com/Pamilo/reto6/assets/81716232/d2152dda-0636-424b-bb14-c8d15a470f1d)
+con esto ya se puede crear el cluster ERM con el siguiente comando
+```bash
+aws emr create-cluster \
+--release-label "emr-7.1.0" \
+--name "Reto6" \
+--applications Name=Spark Name=Hadoop Name=Pig Name=Hive \
+--ec2-attributes KeyName=emr-key.pem \
+--instance-type m5.xlarge \
+--instance-count 3 \
+--use-default-roles \
+--no-auto-terminate \
+--log-uri "s3://bucket-reto" 
+```
+Lo cual da el siguiente resultado
+![imagen](https://github.com/Pamilo/reto6/assets/81716232/76b57987-447f-421b-903e-9244dbef33cd)
 Aparte de esto se instalaro lo siguiente: Git, mrjob y pip atravez de los siguientes comandos
 ```bash
 sudo yum update
@@ -9,19 +30,17 @@ sudo yum install git
 sudo yum install pip
 sudo pip install mrjob
 ```
-Con esto instalado se realiza el pull de los contenidos del repositorio usando
-```bash
-git pull https://github.com/Pamilo/reto6.git
-```
-con esto  se tiene todo
-### Despliegue usando AWS CLI
-En el orden de ideas de el despliegue del cluster el despliegue de el cluster atravez de AWS CLI tambien se hizo atravez de la opcion de clonar como se puede ver en las siguientes imagenes
-![imagen](https://github.com/Pamilo/reto6/assets/81716232/a21e5965-4de8-4768-99b5-b49be933bd65)
-![imagen](https://github.com/Pamilo/reto6/assets/81716232/945a8ab5-5213-4377-8831-236c154abe34)
+![imagen](https://github.com/Pamilo/reto6/assets/81716232/0e3ae12d-d9e0-4a5e-933f-38c9ce83d497)
+![imagen](https://github.com/Pamilo/reto6/assets/81716232/3457e12d-57fa-4745-bda2-05d48540d8a3)
 
-aqui estan los resultados de corre ese comando, esto se hizo en cloudshell de amazon:
-![imagen](https://github.com/Pamilo/reto6/assets/81716232/fc21e192-3897-4787-9d63-a145854771b1)
-![imagen](https://github.com/Pamilo/reto6/assets/81716232/e3136053-cb64-4654-97bd-a017e990db58)
+
+Con esto instalado se debe clonar de los contenidos del repositorio usando
+```bash
+sudo git clone https://github.com/Pamilo/reto6.git
+```
+![imagen](https://github.com/Pamilo/reto6/assets/81716232/ac53efd0-41c3-4358-bc33-8c241c2f3757)
+
+con esto  se tiene todo
 
 ## Ejecucion de programa WordCount
 ### En Local
