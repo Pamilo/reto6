@@ -46,6 +46,7 @@ con esto  se tiene todo
 ### En Local
 Iniciamos ejecutando "wordcount-local.py" para esto se usa el comando
 ```bash
+cd ejercicios/wordcount
 python wordcount-local.py ./*.txt > salida-serial.txt
 ```
 lo cual revisa los archivos datos1.txt y datos2.txt que se encuentran en la carpeta worcount, ese resultado se guarda en salida-serial.txt el resultado es el siguiente
@@ -58,3 +59,47 @@ python wordcount-mr.py ../../datasets/gutenberg-small/*.txts
 ```
 esto es un extracto del resultado
 ![imagen](https://github.com/Pamilo/reto6/assets/81716232/3d439aeb-3647-4591-aa92-e1f6e7842215)
+
+### En Hadoop
+para ejecutar en hadoopprimero conectate a el maestro de el cluster
+```bash
+cd <Donde tengas tu key>
+ssh -i ./emr-key.pem.pem hadoop@ec2-18-215-182-149.compute-1.amazonaws.com
+```
+con esto hay que crear el dataset en hadoop  con los siguientes comandos
+```bash
+hdfs dfs -mkdir -p /user/hadoop/datasets/gutenberg-small/
+hdfs dfs -copyFromLocal ../../datasets/gutenberg-small/*.txt /user/hadoop/datasets/gutenberg-small/
+```
+con eso se obtiene este resultado
+![imagen](https://github.com/Pamilo/reto6/assets/81716232/c70091a1-f8c4-478d-9c35-59df3c9673a8)
+
+con eso ejecuta el siguiente comando
+```bash
+python wordcount-mr.py hdfs:///user/hadoop/datasets/gutenberg-small/* -r hadoop --output-dir hdfs:///user/hadoop/output/results.txt -D mapred.reduce.tasks=10
+```
+lo cual nos da el siguiente resultado
+![imagen](https://github.com/Pamilo/reto6/assets/81716232/db85ad6d-033a-4944-890e-21eb17b23e9d)
+
+esto se guardara en la carpeta de hadoop /user/hadoop/output/results.txt si se obtienelos contenidos de esta se puede ver el resultado devidido en partes como se puede observar a continuacion
+![imagen](https://github.com/Pamilo/reto6/assets/81716232/bc2d4404-2305-4c25-a37b-cf4369a71cf8)
+
+ aqui hay un ejemplo del contenido de uno de estos archivos
+![imagen](https://github.com/Pamilo/reto6/assets/81716232/5c7f3818-97c4-4363-8305-ce8918cf8b34)
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
