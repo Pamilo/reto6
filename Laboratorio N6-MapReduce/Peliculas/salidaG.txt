@@ -1,0 +1,8 @@
+"deportes"	["Best rated", ["274", 3.0]]
+"deportes"	["Worst rated", ["274", 3.0]]
+"religion"	["Best rated", ["98", 4.0]]
+"religion"	["Worst rated", ["86", 3.0]]
+"accion"	["Best rated", ["465", 5.0]]
+"accion"	["Worst rated", ["346", 1.0]]
+"suspenso"	["Best rated", ["222", 5.0]]
+"suspenso"	["Worst rated", ["377", 1.0]]
