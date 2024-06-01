@@ -24,9 +24,18 @@ aqui estan los resultados de corre ese comando, esto se hizo en cloudshell de am
 ![imagen](https://github.com/Pamilo/reto6/assets/81716232/e3136053-cb64-4654-97bd-a017e990db58)
 
 ## Ejecucion de programa WordCount
+### En Local
 Iniciamos ejecutando "wordcount-local.py" para esto se usa el comando
 ```bash
 python wordcount-local.py ./*.txt > salida-serial.txt
 ```
 lo cual revisa los archivos datos1.txt y datos2.txt que se encuentran en la carpeta worcount, ese resultado se guarda en salida-serial.txt el resultado es el siguiente
 ![imagen](https://github.com/Pamilo/reto6/assets/81716232/c436321a-03cc-42ff-b7eb-c0fce9942759)
+
+### Con MRjob
+Para ejecutar el programa con MRJob se ejecuta  "wordcount-mr.py" con el comando
+```bash
+python wordcount-mr.py ../../datasets/gutenberg-small/*.txts
+```
+esto es un extracto del resultado
+![imagen](https://github.com/Pamilo/reto6/assets/81716232/3d439aeb-3647-4591-aa92-e1f6e7842215)
