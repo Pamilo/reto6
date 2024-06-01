@@ -1,6 +1,6 @@
 from mrjob.job import MRJob
 
-class MRSalarioPorSector(MRJob):
+class SalarioPorSector(MRJob):
 
     def mapper(self, _, record):
         idemp, sececon, salary, year = record.split(',')
@@ -16,4 +16,4 @@ class MRSalarioPorSector(MRJob):
         yield sececon, average_salary
 
 if __name__ == '__main__':
-    MRSalarioPorSector.run()
+    SalarioPorSector.run()
