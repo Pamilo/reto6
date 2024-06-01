@@ -1,4 +1,4 @@
-![imagen](https://github.com/Pamilo/reto6/assets/81716232/773624ce-2c32-42b4-b6fd-11b8fc0d76f9)# Reto 6
+# Reto 6
 
 ## Despliegue del cluster 
 El cluster se desplego colonando una instancia de los utilizados para el reto 6 para mas detalle acerca de lo que eso implica mirar este video : https://youtu.be/a3F0zb2Dctk .
