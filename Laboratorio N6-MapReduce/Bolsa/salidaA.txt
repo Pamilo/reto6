@@ -1,0 +1,4 @@
+"exito"	["Dia Minimo", 77.5, "2015-01-01"]
+"exito"	["Dia Maximo", 80.0, "2015-01-02"]
+"EPM"	["Dia Minimo", 22.0, "2015-01-02"]
+"EPM"	["Dia Maximo", 23.0, "2015-01-01"]

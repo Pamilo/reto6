@@ -1,0 +1,4 @@
+"deportes"	3.0
+"religion"	3.5
+"accion"	3.1875
+"suspenso"	3.6666666666666665
