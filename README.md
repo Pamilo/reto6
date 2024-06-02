@@ -1,4 +1,8 @@
 # Reto 6
+## Estudiante
+
+Pablo Micolta Lopez - pmicoltal@eafit.edu.co
+
 
 ## Despliegue del cluster 
 El cluster fue creado atraves de AWS CLI para esto primero (asumiedo que ya se tienen una key pair a utilizar) se crea un bucket en S3 usando el comando
