@@ -73,7 +73,7 @@ esto es un extracto del resultado
 
 ### En Hadoop
 
-con esto hay que crear el dataset en hadoop  con los siguientes comandos
+Para esto hay que crear el dataset en hadoop  con los siguientes comandos
 ```bash
 hdfs dfs -mkdir -p /user/hadoop/datasets/gutenberg-small/
 hdfs dfs -copyFromLocal ../../datasets/gutenberg-small/*.txt /user/hadoop/datasets/gutenberg-small/
