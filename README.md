@@ -197,7 +197,7 @@ y el resultado es
 #### D Número de usuarios que ven una misma película y el rating promedio
 ejecutado con el comando 
 ```bash
-ython peliculasD.py hdfs:///user/hadoop/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///user/hadoop/output/moviekResD.txt -D mapred.reduce.tasks=10
+python peliculasD.py hdfs:///user/hadoop/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///user/hadoop/output/moviekResD.txt -D mapred.reduce.tasks=10
 ```
 esto genera 
 ![imagen](https://github.com/Pamilo/reto6/assets/81716232/9fc98c88-90a9-4975-9200-4827773b81c4)
