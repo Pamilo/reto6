@@ -1,4 +1,4 @@
-# Reto 6
+# Reto 6 ST0263 Tópicos Especiales en Telemática
 ## Estudiante
 
 Pablo Micolta Lopez - pmicoltal@eafit.edu.co
