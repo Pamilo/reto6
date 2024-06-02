@@ -226,7 +226,7 @@ esto genera
 y el resultado es
 ![imagen](https://github.com/Pamilo/reto6/assets/81716232/3abdf694-e37b-4652-a14c-c210a5b01699)
 
-## Video 
+## Video (incluyendo la ecxplicacion del cluster y de los codigos)
 https://youtu.be/lCUeSTeSmDs
 
 
